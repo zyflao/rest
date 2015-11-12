@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName">
+	<bean id="memcachePool" class="com.jrj.common.cache.memcached.client.SockIOPool"
+		factory-method="getInstance" init-method="initialize" destroy-method="shutDown">
+		<constructor-arg>
+			<value>${mc.poolname}</value>
+		</constructor-arg>
+		<property name="servers" value="${mc.servers}">
+		</property>
+		<property name="initConn">
+			<value>${mc.initconn}</value>
+		</property>
+		<property name="minConn">
+			<value>${mc.minconn}</value>
+		</property>
+		<property name="maxConn">
+			<value>${mc.maxconn}</value>
+		</property>
+		<property name="aliveCheck">
+			<value>${mc.alivecheck}</value>
+		</property>
+		<property name="maintSleep">
+			<value>${mc.maintsleep}</value>
+		</property>
+		<property name="nagle">
+			<value>${mc.nagle}</value>
+		</property>
+		<property name="socketTO">
+			<value>${mc.sockettimeout}</value>
+		</property>
+		<property name="hashingAlg">
+			<value>${mc.hashingAlg}</value>
+		</property>
+	</bean>
+	<bean id="sessionMemCache" class="com.jrj.common.cache.memcached.MemcachedCacheCloudImpl">
+		<constructor-arg index="0" value="${mc.cloud.appName}" />
+		<constructor-arg index="1" value="${mc.poolname}" />
+		<constructor-arg index="2" value="${mc.compressEnable}" />
+		<constructor-arg index="3" value="${mc.compressThreshold}" />
+	</bean>
+	<bean id="sessionClient" class="com.cfo.stock.web.rest.session.MemcacheSessionClient"
+		autowire="default"></bean>
+	<bean id="httpSessionService" class="com.cfo.stock.web.rest.session.HttpSessionService"
+		autowire="default"></bean>
+	<bean id="memCachedClient" class="com.jrj.common.cache.memcached.client.MemCachedClient" autowire="default">
+	<constructor-arg>
+			<value>${mc.poolname}</value>
+	</constructor-arg>
+        <property name="sanitizeKeys" value="false"/>
+        <property name="compressEnable"   value="true"/>
+        <property name="compressThreshold" value="1024"/>
+	</bean>
+	
+    <bean id="countByLogAndMemcacheUtil" class="com.cfo.stock.web.rest.utils.CountByLogAndMemcacheUtil">
+	<property name="memCachedClient" ref ="memCachedClient"></property>
+	</bean>
+</beans>

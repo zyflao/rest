@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AppConfig>
+	<Apps desc="App配置">
+		<app desc="最新版本">
+			<Broker id="ZSZQ" newStr="false" order="7" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1"></Broker>
+
+			<Broker id="ZXZQ" newStr="false" order="5" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1"></Broker>
+
+			<Broker id="CCZQ" newStr="false" order="4" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+				<business id="ITOUGU" miniversion="2.0.0" />
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+				<business id="ITOUGU" miniversion="1.0.4" />
+			</Broker>
+			<Broker id="ZJZQ" newStr="false" order="6" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+				<business id="ITOUGU" miniversion="1.0.4" />
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="false" order="2" open="1"
+				transfer="-1" bind="-1" recommend="0" bindOther="1" bindSelf="1">
+				<business id="ITOUGU" miniversion="2.0.0" />
+			</Broker>
+
+			<Broker id="PAZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+				<business id="ITOUGU" miniversion="2.1.0" />
+			</Broker>
+
+			<Broker id="CJZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+				<business id="ITOUGU" miniversion="2.1.0" />
+			</Broker>
+
+			<!-- ITN券商 Android 2.1.0版本 -->
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+				<business id="ITOUGU" miniversion="2.0.1" />
+			</Broker>
+		</app>
+	</Apps>
+	<!-- channelId等于appleStorePro "特殊版本" -->
+	<Apps channelId="AppStorePro" desc="特殊版本">
+		<app version="2.3.0">
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+		</app>
+		<app version="2.5.0">
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+		</app>
+		<app version="higher">
+			<Broker id="HTZQ" newStr="false" order="1" open="1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+	</Apps>
+	<!-- channelId等于appleStore 苹果审核版本 需要特殊处理 免费版 -->
+	<Apps channelId="appleStore" desc="特殊版本">
+		<app version="1.0.0">
+			<Broker id="ZXZQ" newStr="false" order="2" open="-1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+			</Broker>
+			<Broker id="CCZQ" newStr="false" order="1" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+		</app>
+		<app version="1.0.5">
+			<Broker id="ZXZQ" newStr="false" order="3" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="2" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="1" open="-1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+		<app version="1.0.6">
+			<Broker id="ZXZQ" newStr="false" order="3" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="2" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="1" open="1" transfer="1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+		<!-- 1.1.0 版本 开户：中信 绑户交易列表 中山中信恒泰 -->
+		<app version="1.1.0">
+			<Broker id="ZXZQ" newStr="false" order="3" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="2" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="1" open="-1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="4" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+		<!-- 1.1.1版本 开户：中山中信恒泰 绑户交易列表 中山中信恒泰 -->
+		<app version="1.1.1">
+			<Broker id="ZXZQ" newStr="false" order="3" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="2" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="1" open="1" transfer="1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+			<Broker id="ZSZQ" newStr="false" order="4" open="1" transfer="1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+
+		<app version="2.0.0">
+
+			<Broker id="ZXZQ" newStr="false" order="4" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="3" open="-1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="5" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+		</app>
+
+		<app version="2.0.1">
+
+			<Broker id="ZXZQ" newStr="false" order="4" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="5" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+		</app>
+
+		<app version="2.1.0">
+			<Broker id="ZXZQ" newStr="false" order="4" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="1" recommend="1" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="5" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+		</app>
+
+		<app version="2.2.0">
+			<Broker id="PAZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="false" order="2" open="1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="4" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZXZQ" newStr="false" order="5" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="7" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CJZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+		</app>
+		<app version="2.3.0">
+			<Broker id="PAZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="false" order="2" open="1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="4" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZXZQ" newStr="false" order="5" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="7" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CJZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+		</app>
+			<app version="2.4.0">
+			<Broker id="PAZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="false" order="2" open="1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="4" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZXZQ" newStr="false" order="5" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="7" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CJZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+		</app>
+		<app version="2.5.0">
+			<Broker id="PAZQ" newStr="true" order="1" open="1" transfer="-1"
+				bind="-1" recommend="1" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="HAITZQ" newStr="false" order="2" open="1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="1">
+			</Broker>
+
+			<Broker id="HTZQ" newStr="false" order="3" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CCZQ" newStr="false" order="4" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZXZQ" newStr="false" order="5" open="-1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ZSZQ" newStr="false" order="7" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+
+			<Broker id="CJZQ" newStr="false" order="2" open="1" transfer="-1"
+				bind="-1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+
+			<Broker id="ITN_HAITZQ" newStr="false" order="1" open="-1"
+				transfer="-1" bind="1" recommend="0" bindOther="-1" bindSelf="-1">
+			</Broker>
+		</app>
+		<app version="higher">
+			<Broker id="HTZQ" newStr="false" order="1" open="1" transfer="-1"
+				bind="1" recommend="0" bindOther="1" bindSelf="1">
+			</Broker>
+		</app>
+	</Apps>
+
+	<Brokers desc="券商基本信息">
+		<Broker id="ZSZQ">
+			<tip>低佣万2.5，首批沪港通业务资格券商之一，7*24小时接受申请</tip><!-- 券商额外信息 -->
+		</Broker>
+		<Broker id="ZXZQ">
+			<tip>佣金万3，亚洲第四券商。爱投顾只提供开户服务，交易请下载中信证券专用版本</tip>
+		</Broker>
+		<Broker id="CCZQ">
+			<tip>低佣金万2.5，手机3分钟，刷脸就开户，无需排队无需视频</tip>
+		</Broker>
+		<Broker id="HTZQ">
+			<tip>低佣金万2.5，支持融资融券、沪港通，金牌投顾，收益率高达127.7%</tip>
+		</Broker>
+		<Broker id="ZJZQ">
+			<tip>佣金千1，国际水准，顶级投研团队，提供策略组合的操作建议</tip>
+		</Broker>
+		<!-- ITN tip 暂无 -->
+		<Broker id="ITN_HAITZQ">
+			<tip></tip>
+		</Broker>
+		<Broker id="HAITZQ">
+			<tip>免费开户，支持一人多户，佣金低至万2.5！7*24h开户，视频秒接</tip>
+		</Broker>
+		<!-- 平安证券 -->
+		<Broker id="PAZQ">
+			<tip>万2.5佣金，极速开户，公募基金申购费4折</tip>
+		</Broker>
+		<Broker id="CJZQ">
+			<tip>爱投顾只提供开户服务，交易请下载长江证券专用版本。免费极速开户，送金牌投顾服务。</tip>
+		</Broker>
+	</Brokers>
+</AppConfig>

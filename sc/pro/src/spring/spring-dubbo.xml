@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="${dubbo.application.name}" />
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="${dubbo.registry.address}"
+		check="false" />
+
+	<!-- 监控 -->
+	<dubbo:monitor protocol="registry" />
+	<dubbo:consumer timeout="7000" filter="hsconsumer" check="false" />
+	<!-- 生成远程服务代理，可以像使用本地bean一样调用远程服务 -->
+
+	<dubbo:reference id="accountQueryService"
+		interface="com.jrj.stocktrade.api.account.AccountQueryService" />
+
+	<dubbo:reference id="accountService"
+		interface="com.jrj.stocktrade.api.account.AccountService" />
+
+	<dubbo:reference id="bankAccountQueryService"
+		interface="com.jrj.stocktrade.api.banktrans.BankAccountQueryService" />
+
+	<dubbo:reference id="bankTransferService"
+		interface="com.jrj.stocktrade.api.banktrans.BankTransferService" />
+
+	<dubbo:reference id="bankTransferQueryService"
+		interface="com.jrj.stocktrade.api.banktrans.BankTransferQueryService" />
+
+	<dubbo:reference id="bankHistoryQueryService"
+		interface="com.jrj.stocktrade.api.banktrans.BankHistoryQueryService" />
+
+	<dubbo:reference id="bankFundService"
+		interface="com.jrj.stocktrade.api.deposit.BankFundService" />
+
+	<dubbo:reference id="fundService"
+		interface="com.jrj.stocktrade.api.deposit.FundService" >
+		<dubbo:method name="caculateTodayGenLoseRate" timeout="1500"></dubbo:method>
+		</dubbo:reference>
+
+	<dubbo:reference id="flagQueryService"
+		interface="com.jrj.stocktrade.api.pub.FlagQueryService" />
+
+	<dubbo:reference id="stockHistoryQueryService"
+		interface="com.jrj.stocktrade.api.stock.StockHistoryQueryService" />
+
+	<dubbo:reference id="securityCodeService"
+		interface="com.jrj.stocktrade.api.stock.SecurityCodeService" />
+
+	<dubbo:reference id="securityQueryService"
+		interface="com.jrj.stocktrade.api.stock.SecurityQueryService" />
+
+	<dubbo:reference id="securityStockService"
+		interface="com.jrj.stocktrade.api.stock.SecurityStockService" />
+
+	<dubbo:reference id="stockAccountQueryService"
+		interface="com.jrj.stocktrade.api.stock.StockAccountQueryService" />
+
+	<dubbo:reference id="stockQueryService"
+		interface="com.jrj.stocktrade.api.stock.StockQueryService" />
+
+	<dubbo:reference id="branchQueryService"
+		interface="com.jrj.stocktrade.api.pub.BranchQueryService" />
+
+	<dubbo:reference id="passwordFlagService"
+		interface="com.jrj.stocktrade.api.pub.PasswordFlagService" />
+
+	<dubbo:reference id="systemStatusQueryService"
+		interface="com.jrj.stocktrade.api.pub.SystemStatusQueryService" />
+			
+	<dubbo:reference id="stockAccountStatusService"
+		interface="com.jrj.stocktrade.api.opstatus.StockAccountStatusService" />
+		
+	<dubbo:reference id="tradeIframeService"
+		interface="com.jrj.stocktrade.api.iframe.TradeIframeService" />		
+		
+		<dubbo:reference id="userAuthService"
+		interface="com.jrj.stocktrade.api.account.UserAuthService" />
+		
+	<dubbo:reference id="userAccountService"
+		interface="com.jrj.stocktrade.api.account.UserAccountService" />
+	
+	<dubbo:reference id="userInfoService"
+		interface="com.jrj.stocktrade.api.account.UserInfoService" />
+		
+	<dubbo:reference id="authorizationService"
+		interface="com.jrj.stocktrade.api.authorization.AuthorizationService" />
+		
+	<dubbo:reference id="itnAuthService" 
+		interface="com.jrj.stocktrade.api.itn.ItnAuthService"/>
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps>
+	<app>
+		<id>10001</id>
+		<name>用户注册</name>
+		<url>https://192.168.54.22</url>
+		<verifyCode>COMPLEX</verifyCode>
+		<params>
+			<text>
+				<wordDict>ABCDEGHJKLMNRSTUWXY235689</wordDict> <!-- 验证码字典 -->
+				<minLength>4</minLength><!-- 验证码最小长度4位 -->
+				<maxLength>4</maxLength><!-- 验证码最大长度4位 -->
+				<textColor></textColor> <!-- 文字颜色，此值预留，现在暂时为程序中默认的颜色 -->
+			</text>
+			<background>
+				<width>100</width>      <!-- 背景的宽度 200 -->
+				<height>50</height>     <!-- 背景的高度 96 -->
+				<backcolor></backcolor> <!-- 背景色，此值预留，现在暂时为程序中默认的颜色 -->
+			</background>
+			<font>
+				<minSize>30</minSize>  <!-- 文字的最小宽度 -->
+				<maxSize>32</maxSize>  <!-- 验证码最大宽度 -->
+				<fonttype></fonttype>  <!-- 文字类型，此值预留，现在暂时为程序中默认的颜色 -->
+			</font>
+		</params>
+	</app>
+	<app>
+		<id>10002</id>
+		<name>找回密码</name>
+		<url>http://i.jrj.com.cn/retrievePWD.faces</url>
+		<verifyCode>COMPLEX</verifyCode>
+		<params>
+			<text>
+				<wordDict>ABCDEGHJKLMNRSTUWXY235689</wordDict> <!-- 验证码字典 -->
+				<minLength>6</minLength><!-- 验证码最小长度4位 -->
+				<maxLength>6</maxLength><!-- 验证码最大长度4位 -->
+				<textColor></textColor> <!-- 文字颜色，此值预留，现在暂时为程序中默认的颜色 -->
+			</text>
+			<background>
+				<width>200</width>      <!-- 背景的宽度 -->
+				<height>45</height>     <!-- 背景的高度 -->
+				<backcolor></backcolor> <!-- 背景色，此值预留，现在暂时为程序中默认的颜色 -->
+			</background>
+			<font>
+				<minSize>30</minSize>  <!-- 文字的最小宽度 -->
+				<maxSize>35</maxSize>  <!-- 验证码最大宽度 -->
+				<fonttype></fonttype>  <!-- 文字类型，此值预留，现在暂时为程序中默认的颜色 -->
+			</font>
+		</params>
+	</app>
+</apps>

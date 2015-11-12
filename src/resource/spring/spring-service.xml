@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName">
+
+
+	<bean id="httpConnectionClientUtf8" class="com.jrj.common.net.HttpConnectionClient" autowire="default">
+		<property name="connectionTimeOut" value="10000"/>
+		<property name="connectionMaxTotal" value="300"/>
+		<property name="connectionMaxPerHost" value="100"/>
+		<property name="soTimeOut" value="18000"/>
+		<property name="codeing" value="utf-8"/>
+	</bean>
+
+	<!-- <bean id="simpleRestClient" class="com.jrj.common.net.SimpleRestClient">
+		<property name="httpConnectionClient" ref="httpConnectionClientUtf8"></property>
+	</bean> -->
+	
+	<bean id ="simpleRestClient" class="com.cfo.stock.web.rest.utils.SimpleRestClientUtil">
+		<property name="headParams">
+			<map>
+				<entry key="apps" value="stockrest"/>
+			</map>
+		</property>
+	</bean>
+	<bean id="brokerCache" class="com.jrj.stocktrade.api.helper.HashMapCache" />
+	
+	<bean id="brokerHelper" class="com.jrj.stocktrade.api.helper.BrokerHelper">
+		<property name="brokerCache" ref="brokerCache"/>
+		<property name="accountService" ref="accountService"/>
+		<property name="expire" value="20"/>
+	</bean>
+	
+</beans>
